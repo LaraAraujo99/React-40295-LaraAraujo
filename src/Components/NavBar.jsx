@@ -1,5 +1,5 @@
 import React from "react";
-import { ItemListContainer } from "./ItemListContainer";
+import { Link } from "react-router-dom";
 import imprex from "./imprex.png";
 import { CardWidget } from "./CardWidget";
 
@@ -9,21 +9,24 @@ function NavBar() {
   return (
     <div className="flex justify-between bg-red-400">
       <div className=" ">
-        <a href="#">
+        <Link to={"/"}>
           <img className="w-20" src={imprex} />
-        </a>
+        </Link>
       </div>
 
       <div className=" flex items-center">
-        <a className="m-5 " href="#">
+        <Link className="m-5 " to={"/nosotros"}>
           Nosotros
-        </a>
-        <a className="m-5" href="#">
-          Productos
-        </a>
-        <a className="m-5" href="#">
+        </Link>
+        <Link className="m-5" to={"/categoria/0"}>
+          Tarjetería
+        </Link>
+        <Link className="m-5" to={"/categoria/1"}>
+          Calendarios
+        </Link>
+        <Link className="m-5" to={"/contacto"}>
           Contacto
-        </a>
+        </Link>
         <CardWidget></CardWidget>
       </div>
     </div>

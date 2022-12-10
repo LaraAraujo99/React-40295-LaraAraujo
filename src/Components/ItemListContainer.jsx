@@ -1,11 +1,31 @@
-export function ItemListContainer({prop}){
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Item } from "./Item";
+import { ItemCount } from "./ItemCount";
+import { ItemList } from "./ItemList";
+import { promiseData } from "./Services/promiseData";
 
-    return(
-       <div className=" flex h-screen w-screen text-center top-2 bg-red-200">
-        <div className=" p-3 bg-indigo-400 text-center justify-center m-auto border rounded-xl border-black">{prop}</div>
-       </div>
-    )
+export function ItemListContainer() {
+  const [products, setProducts] = useState([]);
+  const params = useParams();
+  console.log(params);
+  useEffect(() => {
+    promiseData().then((productsRecibidos) => {
+      console.log(productsRecibidos);
+      const productFiltrados = productsRecibidos.filter(
+        (itemProd, index, lista) => {
+          return itemProd.idCategory == params.idCategoria;
+        }
+      );
+      setProducts(productFiltrados);
+    });
+  }, [params.idCategoria]);
 
-
-
+  return (
+    <div className=" flex flex-wrap  justify-center items-center w-full  min-h-[70vh]">
+      {products.map((item) => {
+        return <Item producto={item} key={item.id}></Item>;
+      })}
+    </div>
+  );
 }
