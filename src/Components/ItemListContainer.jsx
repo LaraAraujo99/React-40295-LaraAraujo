@@ -3,29 +3,37 @@ import { useParams } from "react-router-dom";
 import { Item } from "./Item";
 import { ItemCount } from "./ItemCount";
 import { ItemList } from "./ItemList";
-import { promiseData } from "./Services/promiseData";
+import Loader from "./Loader";
+import { getTodosProductos } from "./Services/firebase";
 
 export function ItemListContainer() {
   const [products, setProducts] = useState([]);
+  const [estaCargando, setEstaCargando] = useState(true)
   const params = useParams();
-  console.log(params);
+  
   useEffect(() => {
-    promiseData().then((productsRecibidos) => {
-      console.log(productsRecibidos);
+    getTodosProductos().then((productsRecibidos) => {
       const productFiltrados = productsRecibidos.filter(
         (itemProd, index, lista) => {
           return itemProd.idCategory == params.idCategoria;
         }
       );
       setProducts(productFiltrados);
+      setEstaCargando(false)
     });
   }, [params.idCategoria]);
 
   return (
-    <div className=" flex flex-wrap  justify-center items-center w-full  min-h-[70vh]">
-      {products.map((item) => {
-        return <Item producto={item} key={item.id}></Item>;
-      })}
-    </div>
+    <>
+      {estaCargando == true ? (
+        <Loader></Loader>
+      ) : (
+        <div className=" flex flex-wrap  justify-center items-center w-full  min-h-[70vh]">
+          {products.map((item) => {
+            return <Item producto={item} key={item.id}></Item>;
+          })}
+        </div>
+      )}
+    </>
   );
 }

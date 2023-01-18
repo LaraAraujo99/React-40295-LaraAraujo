@@ -1,20 +1,24 @@
+import folletosImprex from "./folletosImprex.webp"
+
 export const productos = [
   {
     idCategory: 0,
     id: 8757854,
-    title: "tarjetas personales",
-    img: "soy una imagen",
+    title: "Tarjetas Personales",
+    img: folletosImprex,
     ventaPorCantidadDeUnidades: 100,
     price: 1110,
     stock: 20,
-    description: "dfsg",
+    TipoDePapel: "fotografico brillante de 230 gr.",
+    description:
+      "Tamaño total 14x6.6cm Impresion full color simple faz en papel  Totalmente personalizado. Utilizamos TINTAS PREMIUM con filtro UV",
     category: "tarjeta",
   },
   {
     idCategory: 0,
     id: 547569933,
-    title: "tarjeta casamiento",
-    img: "soy una imagen",
+    title: "Tarjeta Casamiento",
+    img: folletosImprex,
     ventaPorCantidadDeUnidades: 100,
     price: 1110,
     stock: 22,
@@ -24,8 +28,8 @@ export const productos = [
   {
     idCategory: 1,
     id: 235464,
-    title: "calendario iman",
-    img: "soy una imagen",
+    title: "Calendario Iman",
+    img: folletosImprex,
     ventaPorCantidadDeUnidades: 100,
     price: 11110,
     stock: 10,
@@ -35,8 +39,8 @@ export const productos = [
   {
     idCategory: 0,
     id: 974457422,
-    title: "tarjetas personales",
-    img: "soy una imagen",
+    title: "Tarjetas Personales",
+    img: folletosImprex,
     ventaPorCantidadDeUnidades: 100,
     price: 1110,
     stock: 20,
@@ -46,8 +50,8 @@ export const productos = [
   {
     idCategory: 0,
     id: 4763622383223,
-    title: "tarjeta casamiento",
-    img: "soy una imagen",
+    title: "Tarjeta Casamiento",
+    img: folletosImprex,
     ventaPorCantidadDeUnidades: 100,
     price: 111110,
     stock: 22,
@@ -57,8 +61,8 @@ export const productos = [
   {
     idCategory: 1,
     id: 4374436356532,
-    title: "calendario iman",
-    img: "soy una imagen",
+    title: "Calendario Iman",
+    img: folletosImprex,
     ventaPorCantidadDeUnidades: 100,
     price: 1110,
     stock: 10,
@@ -68,8 +72,8 @@ export const productos = [
   {
     idCategory: 0,
     id: 4233555454,
-    title: "tarjetas personales",
-    img: "soy una imagen",
+    title: "Tarjetas Personales",
+    img: folletosImprex,
     ventaPorCantidadDeUnidades: 100,
     price: 1110,
     stock: 20,
@@ -79,8 +83,8 @@ export const productos = [
   {
     idCategory: 0,
     id: 4832752325342,
-    title: "tarjeta casamiento",
-    img: "soy una imagen",
+    title: "Tarjeta Casamiento",
+    img: folletosImprex,
     ventaPorCantidadDeUnidades: 100,
     price: 1110,
     stock: 22,
@@ -90,8 +94,8 @@ export const productos = [
   {
     idCategory: 1,
     id: 32564364743884,
-    title: "calendario iman",
-    img: "soy una imagen",
+    title: "Calendario Iman",
+    img: folletosImprex,
     ventaPorCantidadDeUnidades: 100,
     price: 11120,
     stock: 10,

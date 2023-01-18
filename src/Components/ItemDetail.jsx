@@ -1,16 +1,15 @@
 import { ItemCount } from "./ItemCount";
 
-export function ItemDetail({ producto }) {
+export function ItemDetail({ producto}) {
   return (
-    <div>
+    <div  className=" italic ">
       <p>{producto.title}</p>
-      <p>{producto.img}</p>
+      <img src={producto.img}></img>
       <p>{producto.title}</p>
       <p>{producto.ventaPorCantidadDeUnidades}</p>
-      <p>{producto.price}</p>
-      <p>{producto.stock}</p>
+      <p>$ {producto.price}</p>
+      <p>Stock: {producto.stock} Unid.</p>
       <p>{producto.description}</p>
-      <ItemCount stock={producto.stock}></ItemCount>
     </div>
   );
 }

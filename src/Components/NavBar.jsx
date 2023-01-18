@@ -22,7 +22,7 @@ function NavBar() {
           Tarjetería
         </Link>
         <Link className="m-5" to={"/categoria/1"}>
-          Calendarios
+          Folletería
         </Link>
         <Link className="m-5" to={"/contacto"}>
           Contacto
