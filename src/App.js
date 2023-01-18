@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <CartContextProvider>
-        <BrowserRouter>
+        <BrowserRouter bbasename='/React-40295-LaraAraujo'>
           <NavBar></NavBar>
 
           <Routes>
