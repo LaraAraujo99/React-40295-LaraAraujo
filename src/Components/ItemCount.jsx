@@ -8,25 +8,28 @@ export function ItemCount({ stock, FnDelBtnCarrito }) {
     <>
       {condicion ? (
         <div>
-          <Button
-            buttonTouch={() => {
-              if (cantProducto > 1) {
-                setCantProducto(cantProducto - 1);
-              }
-            }}
-          >
-            -
-          </Button>
-          <p>{cantProducto}</p>
-          <Button
-            buttonTouch={() => {
-              if (cantProducto < stock) {
-                setCantProducto(cantProducto + 1);
-              }
-            }}
-          >
-            +
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              buttonTouch={() => {
+                if (cantProducto > 1) {
+                  setCantProducto(cantProducto - 1);
+                }
+              }}
+            >
+              -
+            </Button>
+            <p>{cantProducto}</p>
+            <Button
+              buttonTouch={() => {
+                if (cantProducto < stock) {
+                  setCantProducto(cantProducto + 1);
+                }
+              }}
+            >
+              +
+            </Button>
+          </div>
+
           <div>
             <Button
               buttonTouch={() => {

@@ -17,7 +17,6 @@ export function ItemDetailContainer() {
   const [agregadoAlCarrito, setAgregadoAlCarrito] = useState(false);
   useEffect(() => {
     getProductoById(idDelProduct).then((prductoRecibido) => {
-      
       setDetalleProducto(prductoRecibido);
     });
   }, [idDelProduct]);
@@ -27,7 +26,7 @@ export function ItemDetailContainer() {
       {detalleProducto.id == undefined ? (
         <Loader></Loader>
       ) : (
-        <div className="bg-gray-200 w-80 h-auto text-center  justify-center border m-3  border-slate-800">
+        <div className="bg-gray-200 w-screen text-center  justify-center border m-3  border-slate-800">
           <ItemDetail
             className=" flex flex-wrap  justify-center m-auto items-center w-full  min-h-[70vh]"
             producto={detalleProducto}

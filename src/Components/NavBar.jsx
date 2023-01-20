@@ -14,7 +14,7 @@ function NavBar() {
         </Link>
       </div>
 
-      <div className=" flex items-center">
+      <div className=" flex items-center flex-wrap">
         <Link className="m-5 " to={"/nosotros"}>
           Nosotros
         </Link>
